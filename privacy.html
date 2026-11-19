@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — SmartSub Lingo</title>
+<meta name="description" content="How the SmartSub Lingo browser extension handles your data.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="./">SmartSub Lingo</a>
+  <nav><a href="privacy.html" aria-current="page">Privacy</a><a href="support.html">Support</a></nav>
+</header>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: November 19, 2026</p>
+  <div class="lang"><a class="on" href="#en">English</a><a href="#tr">Türkçe</a></div>
+
+  <section id="en">
+    <p>SmartSub Lingo ("the extension") shows translations of words in video subtitles. This policy explains what data the extension handles and where it goes.</p>
+
+    <h2>Summary</h2>
+    <div class="card">
+      <p style="margin:0">The extension sends <strong>no personal data to the developer</strong>. There is no analytics, tracking, advertising or fingerprinting. Your settings and saved words stay in your browser. Only the word or sentence you ask to translate is sent to the translation service you choose.</p>
+    </div>
+
+    <h2>Data stored on your device</h2>
+    <p>The following is stored only in your browser (<code>chrome.storage.local</code>) and never leaves your device except as described below:</p>
+    <ul>
+      <li><strong>Saved words:</strong> words you add to your dictionary, their translations, the subtitle sentence they appeared in, and the date saved.</li>
+      <li><strong>Settings:</strong> tooltip mode, language pair, smart pause, player-control preferences and the selected translation provider.</li>
+      <li><strong>API keys (optional):</strong> if you use a paid provider, your own key is stored locally and sent only to that provider.</li>
+      <li><strong>Translation cache:</strong> recent translation results, so repeated look-ups do not need the network.</li>
+    </ul>
+    <p>You can delete saved words one by one in the extension popup, export them, or remove everything by uninstalling the extension.</p>
+
+    <h2>Data sent to translation services</h2>
+    <p>To translate, the extension sends <strong>only the word or sentence you look up and the language pair</strong> to the provider selected in Settings. Requests contain no account details, browsing history or other personal data.</p>
+    <div class="tablewrap"><table>
+      <tr><th>Provider</th><th>Host</th><th>Data sent</th></tr>
+      <tr><td>Google Translate (default)</td><td><code>translate.googleapis.com</code></td><td>Text, languages</td></tr>
+      <tr><td>MyMemory</td><td><code>api.mymemory.translated.net</code></td><td>Text, languages</td></tr>
+      <tr><td>LibreTranslate</td><td><code>libretranslate.com</code>, <code>translate.argosopentech.com</code> or a server you configure</td><td>Text, languages, optional API key</td></tr>
+      <tr><td>DeepL</td><td><code>api-free.deepl.com</code>, <code>api.deepl.com</code></td><td>Text, languages, your API key</td></tr>
+      <tr><td>Google Cloud Translation</td><td><code>translation.googleapis.com</code></td><td>Text, languages, your API key</td></tr>
+      <tr><td>Microsoft Translator</td><td><code>api.cognitive.microsofttranslator.com</code></td><td>Text, languages, your API key</td></tr>
+    </table></div>
+    <p>Full-sentence translation uses Google Translate first, then LibreTranslate and MyMemory as fallbacks. These services process requests under their own privacy policies.</p>
+
+    <h2>Web pages the extension runs on</h2>
+    <p>The extension runs only on supported video sites (Netflix, YouTube, HBO Max / Max, MUBI). It reads only the visible subtitle text to make words hoverable. It does not collect your viewing history, the titles you watch, or any other page content.</p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>storage:</strong> to keep settings, saved words, optional API keys and the translation cache on your device.</li>
+      <li><strong>Video site hosts:</strong> to detect subtitles and show translation tooltips.</li>
+      <li><strong>Translation provider hosts:</strong> to request translations from the provider you choose.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>The extension does not knowingly collect any data from anyone, including children.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the updated version will be published on this page with a new date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions? See the <a href="support.html">Support page</a>.</p>
+  </section>
+
+  <hr style="border:0;border-top:1px solid var(--line);margin:48px 0">
+
+  <section id="tr" lang="tr">
+    <h1>Gizlilik Politikası</h1>
+    <p class="meta">Son güncelleme: 19 Kasım 2026</p>
+    <p>SmartSub Lingo ("uzantı"), video altyazılarındaki kelimelerin çevirisini gösterir. Bu politika, uzantının hangi verileri işlediğini ve bu verilerin nereye gittiğini açıklar.</p>
+
+    <h2>Özet</h2>
+    <div class="card">
+      <p style="margin:0">Uzantı geliştiriciye <strong>hiçbir kişisel veri göndermez</strong>. Analitik, izleme, reklam veya parmak izi yoktur. Ayarlarınız ve kaydettiğiniz kelimeler tarayıcınızda kalır. Yalnızca çevirmek istediğiniz kelime veya cümle, seçtiğiniz çeviri servisine gönderilir.</p>
+    </div>
+
+    <h2>Cihazınızda saklanan veriler</h2>
+    <p>Aşağıdakiler yalnızca tarayıcınızda (<code>chrome.storage.local</code>) saklanır ve aşağıda anlatılan durum dışında cihazınızdan çıkmaz:</p>
+    <ul>
+      <li><strong>Kaydedilen kelimeler:</strong> sözlüğe eklediğiniz kelimeler, çevirileri, geçtikleri altyazı cümlesi ve kaydedilme tarihi.</li>
+      <li><strong>Ayarlar:</strong> tooltip modu, dil çifti, akıllı duraklatma, oynatıcı kontrolü tercihleri ve seçili çeviri sağlayıcısı.</li>
+      <li><strong>API anahtarları (isteğe bağlı):</strong> ücretli bir sağlayıcı kullanırsanız kendi anahtarınız yerel olarak saklanır ve yalnızca o sağlayıcıya gönderilir.</li>
+      <li><strong>Çeviri önbelleği:</strong> tekrarlanan sorgular ağa çıkmasın diye son çeviri sonuçları.</li>
+    </ul>
+    <p>Kaydedilen kelimeleri popup üzerinden tek tek silebilir, dışa aktarabilir veya uzantıyı kaldırarak hepsini silebilirsiniz.</p>
+
+    <h2>Çeviri servislerine gönderilen veriler</h2>
+    <p>Çeviri için uzantı, Ayarlar'da seçilen sağlayıcıya <strong>yalnızca sorguladığınız kelime veya cümleyi ve dil çiftini</strong> gönderir. İsteklerde hesap bilgisi, tarama geçmişi veya başka kişisel veri bulunmaz. Sağlayıcıların listesi yukarıdaki İngilizce tablodadır. Cümle çevirisinde önce Google Translate, yedek olarak LibreTranslate ve MyMemory kullanılır. Bu servisler istekleri kendi gizlilik politikalarına göre işler.</p>
+
+    <h2>Uzantının çalıştığı sayfalar</h2>
+    <p>Uzantı yalnızca desteklenen video sitelerinde (Netflix, YouTube, HBO Max / Max, MUBI) çalışır ve yalnızca görünür altyazı metnini okur. İzleme geçmişinizi, izlediğiniz içerikleri veya sayfadaki diğer verileri toplamaz.</p>
+
+    <h2>İzinler</h2>
+    <ul>
+      <li><strong>storage:</strong> ayarları, kelimeleri, isteğe bağlı API anahtarlarını ve önbelleği cihazınızda tutmak için.</li>
+      <li><strong>Video sitesi adresleri:</strong> altyazıları algılamak ve çeviri baloncuğunu göstermek için.</li>
+      <li><strong>Çeviri sağlayıcısı adresleri:</strong> seçtiğiniz sağlayıcıdan çeviri istemek için.</li>
+    </ul>
+
+    <h2>Değişiklikler</h2>
+    <p>Bu politika değişirse güncel hâli yeni tarihiyle bu sayfada yayınlanır.</p>
+
+    <h2>İletişim</h2>
+    <p>Sorularınız için <a href="support.html">Destek sayfasına</a> bakın.</p>
+  </section>
+</main>
+<footer>© 2026 SmartSub Lingo</footer>
+</body>
+</html>
