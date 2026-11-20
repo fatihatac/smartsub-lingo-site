@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sorry to see you go — SmartSub Lingo</title>
+<meta name="description" content="Tell us why you removed the SmartSub Lingo extension.">
+<link rel="stylesheet" href="style.css">
+<style>
+  .reasons{display:grid;gap:8px;margin:12px 0 16px}
+  .reasons label{display:flex;gap:10px;align-items:flex-start;background:var(--card);border-radius:10px;padding:10px 14px;cursor:pointer}
+  .reasons input{margin-top:5px}
+  textarea{width:100%;min-height:96px;font:inherit;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;resize:vertical}
+  .field-label{display:block;font-weight:600;margin:8px 0 6px}
+  :root{--on-accent:#fff;--error:#c5221f}
+  @media (prefers-color-scheme:dark){:root{--on-accent:#121214;--error:#f28b82}}
+  button.send{margin-top:12px;font:inherit;font-weight:600;color:var(--on-accent);background:var(--accent);border:0;border-radius:999px;padding:10px 22px;cursor:pointer}
+  button.send:disabled{opacity:.6;cursor:default}
+  .hint{color:var(--muted);font-size:14px;margin-top:8px}
+  .thanks{display:none}
+  form.sent{display:none}
+  form.sent + .thanks{display:block}
+  .error{color:var(--error);font-size:14px;margin-top:8px;display:none}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="./">SmartSub Lingo</a>
+  <nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+</header>
+<main>
+  <div class="lang"><a class="on" href="?lang=en" data-lang="en">English</a><a href="?lang=tr" data-lang="tr">Türkçe</a></div>
+
+  <section id="en" data-section="en">
+    <h1>Sorry to see you go</h1>
+    <p>SmartSub Lingo has been removed. If you have a moment, tell us why. It is optional and helps us fix what went wrong.</p>
+    <form class="survey" novalidate>
+      <div class="reasons" role="radiogroup" aria-label="Reason">
+        <label><input type="radio" name="reason" value="not-working"> It did not work on my video site (no translation when hovering)</label>
+        <label><input type="radio" name="reason" value="bad-translations"> Translations were wrong, missing or slow</label>
+        <label><input type="radio" name="reason" value="site-not-supported"> The site I watch on is not supported</label>
+        <label><input type="radio" name="reason" value="distracting"> It got in the way while watching</label>
+        <label><input type="radio" name="reason" value="temporary"> I only needed it for a short time</label>
+        <label><input type="radio" name="reason" value="other-tool"> I found another tool</label>
+        <label><input type="radio" name="reason" value="other"> Something else</label>
+      </div>
+      <label class="field-label" for="details-en">Anything else? (optional)</label>
+      <textarea id="details-en" name="details" maxlength="1000" placeholder="Which site, what happened, what you expected…"></textarea>
+      <!-- Update both hints when FORM_ENDPOINT is set. -->
+      <p class="hint">Pick a reason or write a comment. <strong>Send</strong> opens a pre-filled public GitHub issue (a GitHub account is needed); once you submit it there, your answer, the extension version and the interface language are publicly visible. Please do not include personal information.</p>
+      <button class="send" type="submit">Send</button>
+      <p class="error" role="alert">Could not send. Please try again, or use the <a href="support.html">support page</a>.</p>
+    </form>
+    <div class="thanks card" role="status">
+      <p style="margin:0"><strong>Thank you.</strong> Changed your mind? <a href="https://chromewebstore.google.com/detail/oidhhleobjkcngbgblhliclodpcaeljp">Reinstall from the Chrome Web Store</a>.</p>
+    </div>
+  </section>
+
+  <section id="tr" data-section="tr" lang="tr" hidden>
+    <h1>Gitmenize üzüldük</h1>
+    <p>SmartSub Lingo kaldırıldı. Bir dakikanız varsa nedenini yazın. İsteğe bağlıdır ve neyin ters gittiğini düzeltmemize yardımcı olur.</p>
+    <form class="survey" novalidate>
+      <div class="reasons" role="radiogroup" aria-label="Neden">
+        <label><input type="radio" name="reason" value="not-working"> Video sitemde çalışmadı (üzerine gelince çeviri çıkmadı)</label>
+        <label><input type="radio" name="reason" value="bad-translations"> Çeviriler yanlış, eksik ya da yavaştı</label>
+        <label><input type="radio" name="reason" value="site-not-supported"> İzlediğim site desteklenmiyor</label>
+        <label><input type="radio" name="reason" value="distracting"> İzlerken rahatsız etti</label>
+        <label><input type="radio" name="reason" value="temporary"> Kısa bir süre için gerekiyordu</label>
+        <label><input type="radio" name="reason" value="other-tool"> Başka bir araç buldum</label>
+        <label><input type="radio" name="reason" value="other"> Başka bir neden</label>
+      </div>
+      <label class="field-label" for="details-tr">Eklemek istediğiniz bir şey var mı? (isteğe bağlı)</label>
+      <textarea id="details-tr" name="details" maxlength="1000" placeholder="Hangi site, ne oldu, ne bekliyordunuz…"></textarea>
+      <p class="hint">Bir neden seçin ya da bir yorum yazın. <strong>Gönder</strong>, önceden doldurulmuş ve herkese açık bir GitHub issue'su açar (GitHub hesabı gerekir); orada gönderdiğinizde yanıtınız, uzantı sürümü ve arayüz dili herkese açık olarak görünür. Lütfen kişisel bilgi yazmayın.</p>
+      <button class="send" type="submit">Gönder</button>
+      <p class="error" role="alert">Gönderilemedi. Tekrar deneyin ya da <a href="support.html">destek sayfasını</a> kullanın.</p>
+    </form>
+    <div class="thanks card" role="status">
+      <p style="margin:0"><strong>Teşekkürler.</strong> Fikrinizi mi değiştirdiniz? <a href="https://chromewebstore.google.com/detail/oidhhleobjkcngbgblhliclodpcaeljp">Chrome Web Store'dan yeniden yükleyin</a>.</p>
+    </div>
+  </section>
+</main>
+<footer>© 2026 SmartSub Lingo · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></footer>
+<script>
+  // Where answers are sent. Set this to a form service endpoint that accepts
+  // POSTed form data and answers with JSON (e.g. Formspree:
+  // https://formspree.io/f/<id>). While it is empty, "Send" opens a
+  // pre-filled public GitHub issue instead, which needs a GitHub account.
+  // When setting it, update the .hint texts and the privacy page wording.
+  var FORM_ENDPOINT = '';
+  var ISSUE_URL = 'https://github.com/fatihatac/smartsub-lingo-site/issues/new';
+
+  var params = new URLSearchParams(location.search);
+  var version = (params.get('v') || '').slice(0, 20);
+  var lang = params.get('lang') === 'tr' ? 'tr' : 'en';
+
+  var TITLES = { en: 'Sorry to see you go — SmartSub Lingo', tr: 'Gitmenize üzüldük — SmartSub Lingo' };
+
+  function showLang(code) {
+    document.documentElement.lang = code;
+    document.title = TITLES[code];
+    document.querySelectorAll('[data-section]').forEach(function (s) {
+      s.hidden = s.getAttribute('data-section') !== code;
+    });
+    document.querySelectorAll('.lang a').forEach(function (a) {
+      a.classList.toggle('on', a.getAttribute('data-lang') === code);
+    });
+  }
+  showLang(lang);
+  document.querySelectorAll('.lang a').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      showLang(a.getAttribute('data-lang'));
+    });
+  });
+
+  document.querySelectorAll('form.survey').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var checked = form.querySelector('input[name="reason"]:checked');
+      var reason = checked ? checked.value : '';
+      var details = form.querySelector('textarea').value.trim();
+      if (!reason && !details) {
+        return;
+      }
+      var sectionLang = form.closest('[data-section]').getAttribute('data-section');
+      var button = form.querySelector('button');
+      var error = form.querySelector('.error');
+      error.style.display = 'none';
+
+      if (!FORM_ENDPOINT) {
+        var body = 'Reason: ' + (reason || '-') + '\nVersion: ' + (version || '-') +
+          '\nLanguage: ' + sectionLang + '\n\n' + details;
+        window.open(ISSUE_URL + '?' + new URLSearchParams({ title: 'Uninstall feedback: ' + (reason || 'other'), body: body }), '_blank', 'noopener');
+        form.classList.add('sent');
+        return;
+      }
+
+      var data = new FormData();
+      data.append('reason', reason);
+      data.append('details', details);
+      data.append('version', version);
+      data.append('lang', sectionLang);
+      button.disabled = true;
+      fetch(FORM_ENDPOINT, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
+        .then(function (res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          form.classList.add('sent');
+        })
+        .catch(function () {
+          error.style.display = 'block';
+          button.disabled = false;
+        });
+    });
+  });
+</script>
+</body>
+</html>

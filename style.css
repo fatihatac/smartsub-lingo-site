@@ -19,7 +19,7 @@ th{color:var(--muted);font-weight:600}
 .tablewrap{overflow-x:auto}
 .lang{display:inline-flex;gap:4px;background:var(--card);border-radius:999px;padding:4px;margin:8px 0 16px}
 .lang a{padding:4px 12px;border-radius:999px;text-decoration:none;color:var(--muted);font-size:14px}
-.lang a.on{background:var(--accent);color:#fff}
+.lang a.on{background:var(--accent);color:var(--bg)}
 .card{background:var(--card);border-radius:12px;padding:16px 20px;margin:16px 0}
 details{border-bottom:1px solid var(--line);padding:10px 0}
 summary{cursor:pointer;font-weight:600}
