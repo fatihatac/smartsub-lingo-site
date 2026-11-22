@@ -14,7 +14,7 @@
 </header>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: November 20, 2026</p>
+  <p class="meta">Last updated: November 22, 2026</p>
   <div class="lang"><a class="on" href="#en">English</a><a href="#tr">Türkçe</a></div>
 
   <section id="en">
@@ -22,7 +22,7 @@
 
     <h2>Summary</h2>
     <div class="card">
-      <p style="margin:0">The extension sends <strong>no personal data to the developer</strong>. There is no analytics, tracking, advertising or fingerprinting. Your settings and saved words stay in your browser. Only the word or sentence you ask to translate is sent to the translation service you choose.</p>
+      <p style="margin:0">The extension sends <strong>no personal data to the developer</strong>. There is no analytics, tracking, advertising or fingerprinting. Your settings and saved words stay in your browser. For translation, only the text being translated is sent: to the service you choose, and in the cases described below to Google Translate, LibreTranslate or MyMemory.</p>
     </div>
 
     <h2>Data stored on your device</h2>
@@ -30,32 +30,34 @@
     <ul>
       <li><strong>Saved words:</strong> words you add to your dictionary, their translations, the subtitle sentence they appeared in, and the date saved.</li>
       <li><strong>Settings:</strong> tooltip mode, language pair, smart pause, player-control preferences and the selected translation provider.</li>
-      <li><strong>API keys (optional):</strong> if you use a paid provider, your own key is stored locally and sent only to that provider.</li>
+      <li><strong>API keys (optional):</strong> if you enter a key for a provider, it is stored locally and sent only to that provider.</li>
       <li><strong>Translation cache:</strong> recent translation results, so repeated look-ups do not need the network.</li>
     </ul>
     <p>You can delete saved words one by one in the extension popup, export them, or remove everything by uninstalling the extension.</p>
 
     <h2>Data sent to translation services</h2>
-    <p>To translate, the extension sends <strong>only the word or sentence you look up and the language pair</strong> to the provider selected in Settings. Requests contain no account details, browsing history or other personal data.</p>
+    <p>When you hover over or click a subtitle word, that word and the language pair are sent to the translation service selected in Settings. If that service fails (network or server error, timeout, quota, no translation), the same word is sent to <strong>Google Translate (Free)</strong> and, if that fails too, to <strong>MyMemory</strong>. This also happens when you selected DeepL, Google Cloud, Microsoft or your own LibreTranslate server. It does not happen when the selected service's required API key is missing or the service rejects access (HTTP 401/403).</p>
+    <p>Requests contain no account details, browsing history or other personal data.</p>
     <div class="tablewrap"><table>
       <tr><th>Provider</th><th>Host</th><th>Data sent</th></tr>
       <tr><td>Google Translate (default)</td><td><code>translate.googleapis.com</code></td><td>Text, languages</td></tr>
       <tr><td>MyMemory</td><td><code>api.mymemory.translated.net</code></td><td>Text, languages</td></tr>
-      <tr><td>LibreTranslate</td><td><code>libretranslate.com</code>, <code>translate.argosopentech.com</code> or a server you configure</td><td>Text, languages, optional API key</td></tr>
+      <tr><td>LibreTranslate</td><td><code>libretranslate.com</code> (default) or a server you configure; <code>translate.argosopentech.com</code> only if no address is set</td><td>Text, languages, optional API key</td></tr>
       <tr><td>DeepL</td><td><code>api-free.deepl.com</code>, <code>api.deepl.com</code></td><td>Text, languages, your API key</td></tr>
       <tr><td>Google Cloud Translation</td><td><code>translation.googleapis.com</code></td><td>Text, languages, your API key</td></tr>
       <tr><td>Microsoft Translator</td><td><code>api.cognitive.microsofttranslator.com</code></td><td>Text, languages, your API key</td></tr>
     </table></div>
-    <p>Full-sentence translation uses Google Translate first, then LibreTranslate and MyMemory as fallbacks. These services process requests under their own privacy policies.</p>
+    <p>When you press <code>t</code>, the subtitle text on screen and the language pair are sent. Sentence translation <strong>does not use the service selected for words</strong>. It tries, in order: Google Translate, then LibreTranslate (the server address in Settings, <code>libretranslate.com</code> unless you changed it; without your API key), then MyMemory. These services process requests under their own privacy policies.</p>
+    <p>The pronunciation button uses the browser's speech engine. Depending on the voice your browser picks, the word may be processed by that voice's online service (for example Google).</p>
 
     <h2>Web pages the extension runs on</h2>
-    <p>The extension runs only on supported video sites (Netflix, YouTube, HBO Max / Max, MUBI). It reads only the visible subtitle text to make words hoverable. It does not collect your viewing history, the titles you watch, or any other page content.</p>
+    <p>The extension runs only on supported video sites (Netflix, YouTube, HBO Max / Max, MUBI). It reads only the visible subtitle text to make words hoverable. On Netflix it also checks the rating band on your device, so that it does not hide health warnings; that text is never sent. It does not collect your viewing history, the titles you watch, or any other page content.</p>
 
     <h2>Permissions</h2>
     <ul>
       <li><strong>storage:</strong> to keep settings, saved words, optional API keys and the translation cache on your device.</li>
       <li><strong>Video site hosts:</strong> to detect subtitles and show translation tooltips.</li>
-      <li><strong>Translation provider hosts:</strong> to request translations from the provider you choose.</li>
+      <li><strong>Translation provider hosts:</strong> to request translations from the provider you choose and from the fallback services described above.</li>
       <li><strong>Optional access to one server you choose:</strong> only if you enter your own LibreTranslate server address in Settings, Chrome asks you to allow access to that single server. If you decline, nothing else is affected, and you can revoke it any time in Chrome's extension settings.</li>
     </ul>
 
@@ -76,12 +78,12 @@
 
   <section id="tr" lang="tr">
     <h1>Gizlilik Politikası</h1>
-    <p class="meta">Son güncelleme: 20 Kasım 2026</p>
+    <p class="meta">Son güncelleme: 22 Kasım 2026</p>
     <p>SmartSub Lingo ("uzantı"), video altyazılarındaki kelimelerin çevirisini gösterir. Bu politika, uzantının hangi verileri işlediğini ve bu verilerin nereye gittiğini açıklar.</p>
 
     <h2>Özet</h2>
     <div class="card">
-      <p style="margin:0">Uzantı geliştiriciye <strong>hiçbir kişisel veri göndermez</strong>. Analitik, izleme, reklam veya parmak izi yoktur. Ayarlarınız ve kaydettiğiniz kelimeler tarayıcınızda kalır. Yalnızca çevirmek istediğiniz kelime veya cümle, seçtiğiniz çeviri servisine gönderilir.</p>
+      <p style="margin:0">Uzantı geliştiriciye <strong>hiçbir kişisel veri göndermez</strong>. Analitik, izleme, reklam veya parmak izi yoktur. Ayarlarınız ve kaydettiğiniz kelimeler tarayıcınızda kalır. Çeviri için yalnızca çevrilen metin gönderilir: seçtiğiniz servise ve aşağıda anlatılan durumlarda Google Translate, LibreTranslate veya MyMemory'ye.</p>
     </div>
 
     <h2>Cihazınızda saklanan veriler</h2>
@@ -89,22 +91,24 @@
     <ul>
       <li><strong>Kaydedilen kelimeler:</strong> sözlüğe eklediğiniz kelimeler, çevirileri, geçtikleri altyazı cümlesi ve kaydedilme tarihi.</li>
       <li><strong>Ayarlar:</strong> tooltip modu, dil çifti, akıllı duraklatma, oynatıcı kontrolü tercihleri ve seçili çeviri sağlayıcısı.</li>
-      <li><strong>API anahtarları (isteğe bağlı):</strong> ücretli bir sağlayıcı kullanırsanız kendi anahtarınız yerel olarak saklanır ve yalnızca o sağlayıcıya gönderilir.</li>
+      <li><strong>API anahtarları (isteğe bağlı):</strong> bir sağlayıcı için anahtar girerseniz yerel olarak saklanır ve yalnızca o sağlayıcıya gönderilir.</li>
       <li><strong>Çeviri önbelleği:</strong> tekrarlanan sorgular ağa çıkmasın diye son çeviri sonuçları.</li>
     </ul>
     <p>Kaydedilen kelimeleri popup üzerinden tek tek silebilir, dışa aktarabilir veya uzantıyı kaldırarak hepsini silebilirsiniz.</p>
 
     <h2>Çeviri servislerine gönderilen veriler</h2>
-    <p>Çeviri için uzantı, Ayarlar'da seçilen sağlayıcıya <strong>yalnızca sorguladığınız kelime veya cümleyi ve dil çiftini</strong> gönderir. İsteklerde hesap bilgisi, tarama geçmişi veya başka kişisel veri bulunmaz. Sağlayıcıların listesi yukarıdaki İngilizce tablodadır. Cümle çevirisinde önce Google Translate, yedek olarak LibreTranslate ve MyMemory kullanılır. Bu servisler istekleri kendi gizlilik politikalarına göre işler.</p>
+    <p>Bir altyazı kelimesinin üzerine geldiğinizde veya tıkladığınızda o kelime ve dil çifti, Ayarlar'da seçili çeviri servisine gönderilir. O servis başarısız olursa (ağ veya sunucu hatası, zaman aşımı, kota, çeviri bulunamaması) aynı kelime <strong>Google Translate (Ücretsiz)</strong> servisine, o da başarısız olursa <strong>MyMemory</strong>'ye gönderilir. DeepL, Google Cloud, Microsoft veya kendi LibreTranslate sunucunuzu seçmiş olsanız da böyledir. Seçili servisin zorunlu API anahtarı eksikse veya servis erişimi reddederse (HTTP 401/403) bu yapılmaz.</p>
+    <p><code>t</code> tuşuna bastığınızda ekrandaki altyazı metni ve dil çifti gönderilir. Cümle çevirisi <strong>kelimeler için seçtiğiniz servisi kullanmaz</strong>. Sırasıyla şunlar denenir: Google Translate, ardından LibreTranslate (Ayarlar'daki sunucu adresi, değiştirmediyseniz <code>libretranslate.com</code>; API anahtarınız olmadan), ardından MyMemory. İsteklerde hesap bilgisi, tarama geçmişi veya başka kişisel veri bulunmaz. Sağlayıcıların listesi yukarıdaki İngilizce tablodadır. Bu servisler istekleri kendi gizlilik politikalarına göre işler.</p>
+    <p>Seslendirme düğmesi tarayıcının konuşma motorunu kullanır. Tarayıcının seçtiği sese göre kelime, o sesin çevrimiçi servisinde (örneğin Google) işlenebilir.</p>
 
     <h2>Uzantının çalıştığı sayfalar</h2>
-    <p>Uzantı yalnızca desteklenen video sitelerinde (Netflix, YouTube, HBO Max / Max, MUBI) çalışır ve yalnızca görünür altyazı metnini okur. İzleme geçmişinizi, izlediğiniz içerikleri veya sayfadaki diğer verileri toplamaz.</p>
+    <p>Uzantı yalnızca desteklenen video sitelerinde (Netflix, YouTube, HBO Max / Max, MUBI) çalışır ve yalnızca görünür altyazı metnini okur. Netflix'te ayrıca sağlık uyarılarını gizlememek için yaş sınırı bandını cihazınızda kontrol eder; bu metin hiçbir yere gönderilmez. İzleme geçmişinizi, izlediğiniz içerikleri veya sayfadaki diğer verileri toplamaz.</p>
 
     <h2>İzinler</h2>
     <ul>
       <li><strong>storage:</strong> ayarları, kelimeleri, isteğe bağlı API anahtarlarını ve önbelleği cihazınızda tutmak için.</li>
       <li><strong>Video sitesi adresleri:</strong> altyazıları algılamak ve çeviri baloncuğunu göstermek için.</li>
-      <li><strong>Çeviri sağlayıcısı adresleri:</strong> seçtiğiniz sağlayıcıdan çeviri istemek için.</li>
+      <li><strong>Çeviri sağlayıcısı adresleri:</strong> seçtiğiniz sağlayıcıdan ve yukarıda anlatılan yedek servislerden çeviri istemek için.</li>
       <li><strong>Seçtiğiniz tek bir sunucuya isteğe bağlı erişim:</strong> yalnızca Ayarlar'a kendi LibreTranslate sunucu adresinizi girerseniz Chrome o tek sunucu için izin ister. Reddederseniz başka hiçbir şey etkilenmez; izni Chrome'un uzantı ayarlarından istediğiniz zaman geri alabilirsiniz.</li>
     </ul>
 
